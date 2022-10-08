@@ -5,7 +5,7 @@ import Span from "../Span";
 export default function Logo() {
   return (
     <Link to="/">
-      STUDENTS <Span style={{ color: "red" }}>INFO</Span>
+      {/* STUDENTS <Span style={{ color: "red" }}>INFO</Span> */}
     </Link>
   );
 }

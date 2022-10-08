@@ -219,7 +219,7 @@ export default function TaskModal({ handleClose }) {
 }
 
 const Form = styled.div`
-  margin-top: 30px;
+  // margin-top: 30px;
 `;
 
 // const ColorBox = styled.div`

@@ -8,5 +8,5 @@ export default function Title(props) {
 const P = styled.p`
   line-height: 1;
   font-size: 16px;
-  color: #2c234d;
+  // color: #2c234d;
 `;

@@ -48,4 +48,4 @@ const notesReducers = (state = initState, action) => {
   }
 };
 
-export default notesReducers;
+// export default notesReducers;

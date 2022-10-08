@@ -10,5 +10,5 @@ const FlexLocal = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: ${(bg) => (bg ? "red" : "transparent")};
+  // background-color: ${(bg) => (bg ? "red" : "transparent")};
 `;

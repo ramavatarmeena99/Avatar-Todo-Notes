@@ -18,4 +18,4 @@ const errorReducers = (state = initState, action) => {
   }
 };
 
-export default errorReducers;
+// export default errorReducers;

@@ -24,5 +24,5 @@ const Input = styled.input`
 `;
 
 const Label = styled.label`
-  margin-top: 20px;
+  // margin-top: 20px;
 `;

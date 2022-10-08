@@ -1,5 +1,5 @@
-import React from "react";
+// import React from "react";
 
-export default function SubTitle({ children }) {
-  return <h6>{children}</h6>;
-}
+// export default function SubTitle({ children }) {
+//   return <h6>{children}</h6>;
+// }

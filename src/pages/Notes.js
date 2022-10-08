@@ -171,6 +171,6 @@ const Box = styled.div`
   justify-content: space-between;
   cursor: pointer;
   @media (max-width: 768px) {
-    width: 100%;
+    // width: 100%;
   }
 `;

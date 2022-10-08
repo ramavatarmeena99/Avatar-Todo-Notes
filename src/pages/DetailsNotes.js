@@ -141,5 +141,5 @@ const StudentInfo = styled.div`
   // justify-content: flex-start;
 `;
 const StudentDetails = styled.p`
-  padding-right: 5px;
+  // padding-right: 5px;
 `;
