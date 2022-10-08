@@ -24,8 +24,7 @@ import Alert from "../components/reusable/Alert";
 import { errorAction } from "../redux/action/errorActions";
 
 function capitalizeFirstLetter(string) {
-  return string
-  // charAt(0).toUpperCase() + string.slice(1);
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 export default function Notes() {
@@ -47,7 +46,7 @@ export default function Notes() {
 
   const deleteNotesHandler = (_item_values) => {
     const remainData = notesData?.filter(
-      (flt) => flt.studentName !== _item_values.studentName
+      (flt) => flt.todo !== _item_values.todo
     );
     dispatch(deleteNotesAction(remainData));
 
@@ -71,17 +70,17 @@ export default function Notes() {
 
       <Flex justifyContent="space-between">
         <Title>
-          All <Span style={{ color: "red" }}>Students</Span> Details
+          Your <Span style={{ color: "red" }}>SMART</Span> notes
         </Title>
         <Button onClick={addNotesHandler}>
-          <Title>+ ADD STUDENTS DETAILS</Title>
+          <Title>+ NEW TASK</Title>
         </Button>
       </Flex>
 
       <Flex mt={30}>
         {notesData.length === 0 && (
           <Center height="60vh">
-            <Title>No student info created by you</Title>
+            <Title>No notes created by you</Title>
             <Button onClick={addNotesHandler}>
               <Title>+ CREATE NOW</Title>
             </Button>
@@ -92,19 +91,18 @@ export default function Notes() {
           return (
             <Box color={item.color} key={index}>
               <div onClick={() => redirectToDetails(item)}>
-                <p>Student Name:</p>
                 <Title style={{ width: "95%" }}>
                   {capitalizeFirstLetter(
-                    item.studentName?.length > 30
-                      ? item.studentName?.slice(0, 30) + "..."
-                      : item.studentName
+                    item.todo?.length > 30
+                      ? item.todo?.slice(0, 30) + "..."
+                      : item.todo
                   )}
                 </Title>
                 <Description>
                   {capitalizeFirstLetter(
-                    item.fatherName?.length > 180
-                      ? item.fatherName?.slice(0, 180) + "..."
-                      : item.fatherName
+                    item.description?.length > 180
+                      ? item.description?.slice(0, 180) + "..."
+                      : item.description
                   )}
                 </Description>
               </div>
@@ -171,6 +169,6 @@ const Box = styled.div`
   justify-content: space-between;
   cursor: pointer;
   @media (max-width: 768px) {
-    // width: 100%;
+    width: 100%;
   }
 `;

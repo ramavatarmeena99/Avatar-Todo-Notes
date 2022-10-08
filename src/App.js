@@ -31,6 +31,6 @@ export default function App() {
           </PersistGate>
         </Provider>
       </div>
-    {/* </BrowserRouter> */}
+    </BrowserRouter>
   );
 }

@@ -12,7 +12,7 @@ export const createNotesAction = (payload) => ({
 
 export const deleteNotesAction = (payload) => ({
   type: DELETE_NOTES,
-  // payload,
+  payload,
 });
 
 export const editNotesAction = (payload) => ({

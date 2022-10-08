@@ -16,7 +16,7 @@ const FlexRow = styled.div`
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid gray;
-  // padding: 10px 20px;
+  padding: 10px 20px;
 `;
 
 export default Header;

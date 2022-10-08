@@ -6,5 +6,5 @@ export default function Description({ children }) {
 }
 const P = styled.p`
   line-height: 1.2;
-  // font-weight: 400;
+  font-weight: 400;
 `;

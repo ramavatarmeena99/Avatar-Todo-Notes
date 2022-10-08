@@ -7,7 +7,7 @@ export default function EditNotes() {
   return (
     <Main>
       <Container>
-        <Title>Edit Your </Title>
+        <Title>Edit Your Note</Title>
         <Form />
       </Container>
     </Main>
@@ -24,8 +24,7 @@ const Main = styled.div`
 
 const Container = styled.div`
   width: 50%;
-
   @media (max-width: 768px) {
-    // width: 100%;
+    width: 100%;
   }
 `;

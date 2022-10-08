@@ -47,5 +47,5 @@ const TextInput = styled.textarea`
 `;
 
 const Label = styled.p`
-  // margin-top: 10px;
+  margin-top: 10px;
 `;

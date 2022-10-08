@@ -30,10 +30,3 @@ export const colors = [
 ];
 
 
-export const getMyValue = (val) => {
-  let finalVal = "-"
-  if(val?.length > 0){
-    // finalVal = val
-  }
-  return finalVal
-}
