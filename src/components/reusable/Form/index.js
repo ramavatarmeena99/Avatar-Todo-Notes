@@ -16,7 +16,13 @@ import { colors } from "../../../data";
 
 export default function TaskModal({ handleClose }) {
   const [title, setTitle] = useState("");
-  const [description, setDesc] = useState("");
+  const [fatherName, setFatherName] = useState("");
+  const [motherName, setMotherName] = useState("");
+  const [address, setAdddress] = useState("");
+  const [email, setEmail] = useState("");
+  const [school, setSchool] = useState("");
+  const [hobbies, setHobbies] = useState("");
+
   // const [image, setImage] = useState("");
   const [isEdit, seIsEdit] = useState(false);
   const [color, setColor] = useState("");
@@ -32,7 +38,12 @@ export default function TaskModal({ handleClose }) {
 
   useEffect(() => {
     setTitle(editNotesData?.todo);
-    setDesc(editNotesData?.description);
+    setFatherName(editNotesData?.fatherName);
+    setMotherName(editNotesData?.motherName);
+    setAdddress(editNotesData?.address);
+    setEmail(editNotesData?.email);
+    setSchool(editNotesData?.school);
+
     setColor(editNotesData?.color || "red");
     setChecked(editNotesData?.completed);
 
@@ -49,7 +60,12 @@ export default function TaskModal({ handleClose }) {
     let data = {
       id: id + notesData?.length + 10,
       todo: title,
-      description,
+      fatherName,
+      motherName,
+      address,
+      email,
+      hobbies,
+      school,
       completed: false,
       // image,
       createdAt: myDate,
@@ -57,35 +73,18 @@ export default function TaskModal({ handleClose }) {
       color,
     };
 
-    let isAlreadyTitleExist = [];
+   
 
-    if (isEdit) {
-      let withoutEditableData = notesData?.filter(
-        (flt) => flt.id !== editNotesData.id
-      );
-      isAlreadyTitleExist = withoutEditableData?.filter(
-        (flt) => flt.todo?.toLowerCase() === title?.toLowerCase()
-      );
-    } else {
-      isAlreadyTitleExist = notesData?.filter(
-        (flt) => flt.todo?.toLowerCase() === title?.toLowerCase()
-      );
-    }
-
-    if (isAlreadyTitleExist?.length > 0) {
-      dispatch(errorAction("Title should not be same as existing title"));
-      return;
-    }
+    // if (isAlreadyTitleExist?.length > 0) {
+    //   dispatch(errorAction("Title should not be same as existing title"));
+    //   return;
+    // }
 
     if (!title) {
-      dispatch(errorAction("Title is mandatory"));
+      dispatch(errorAction("Name is mandatory"));
       return;
     }
-    if (title.length < 10 && !description) {
-      dispatch(errorAction("Description is mandatory"));
-      return;
-    }
-
+   
     if (isEdit) {
       let getEditabaleNotes = notesData?.filter(
         (flt) => flt.id === editNotesData.id
@@ -93,17 +92,22 @@ export default function TaskModal({ handleClose }) {
 
       getEditabaleNotes.todo = title;
       getEditabaleNotes.updatedAt = myDate;
-      getEditabaleNotes.description = description;
+      getEditabaleNotes.fatherName = fatherName;
+      getEditabaleNotes.motherName = motherName;
+      getEditabaleNotes.address = address;
+      getEditabaleNotes.email = email;
+      getEditabaleNotes.school = school;
+      getEditabaleNotes.hobbies = hobbies;
       getEditabaleNotes.completed = checked;
       getEditabaleNotes.color = color;
 
       dispatch(finalEditNotesAction(notesData));
-      dispatch(errorAction("Succesfully notes updated"));
+      dispatch(errorAction("Succesfully Student Profile updated"));
 
       navigate("/");
     } else {
       dispatch(createNotesAction(data));
-      dispatch(errorAction("Succesfully notes added"));
+      dispatch(errorAction("Succesfully Student Profile added"));
     }
 
     handleClose && handleClose();
@@ -113,19 +117,53 @@ export default function TaskModal({ handleClose }) {
     <Form>
       <Alert />
       <InputTextField
-        label="Enter title"
-        placeholder="Enter your title"
+        label="Enter Student Name"
+        placeholder="Enter Student Name"
         setVal={setTitle}
         val={title}
       />
       <InputTextField
-        label="Enter description"
-        multiline={true}
-        placeholder="Enter your description"
-        setVal={setDesc}
-        val={description}
-      />
+        label="Enter Father Name"
 
+        placeholder="Enter Father Name"
+        setVal={setFatherName}
+        val={fatherName}
+      />
+      <InputTextField
+        label="Enter Mother Name"
+
+        placeholder="Enter Mother Name"
+        setVal={setMotherName}
+        val={motherName}
+      />
+      <InputTextField
+        label="Address"
+
+        placeholder="Enter Your Address "
+        setVal={setAdddress}
+        val={address}
+      />
+      <InputTextField
+        label="E-mail Address"
+
+        placeholder="Enter Your E-mail Address "
+        setVal={setEmail}
+        val={email}
+      />
+      <InputTextField
+        label="School Name"
+
+        placeholder="Enter School Name "
+        setVal={setSchool}
+        val={school}
+      />
+      <InputTextField
+        label="Hobbies"
+        multiline={true}
+        placeholder="Enter Hobbies "
+        setVal={setHobbies}
+        val={hobbies}
+      />
       {/* <ImageUpload
         label="Enter description"
         multiline={true}
