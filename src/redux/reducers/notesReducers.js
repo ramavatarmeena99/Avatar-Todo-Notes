@@ -10,14 +10,7 @@ const initState = {
   test: null,
   editNotesData: {},
   notesData: [
-    {
-      id: 1,
-      todo: "About this app",
-      description: "This is a great app with great functionality",
-      completed: true,
-      createdAt: new Date().toLocaleString().replace(",", ""),
-      updatedAt: new Date().toLocaleString().replace(",", ""),
-    },
+
   ],
 };
 

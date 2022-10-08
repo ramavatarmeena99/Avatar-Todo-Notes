@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 export default function Title(props) {
-  return <H1 {...props}>{props.children}</H1>;
+  return <P {...props}>{props.children}</P>;
 }
 
-const H1 = styled.h1`
+const P = styled.p`
   line-height: 1;
-  font-size: 20px;
+  font-size: 16px;
   color: #2c234d;
 `;
