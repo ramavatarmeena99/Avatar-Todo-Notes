@@ -1,6 +1,5 @@
 ![](https://github.com/ShravanMeena/Notes-Taking-App-TO-DO/blob/main/src/assets/demo_.png?raw=true)
 
-![](https://github.com/ramavatarmeena99/Avatar-Students-Details/blob/main/src/assets/demo.png?raw=true)
 ## About Project
 To-do application for keeping to-do records of past, present and future.
 
