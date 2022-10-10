@@ -5,12 +5,12 @@ To-do application for keeping to-do records of past, present and future.
 
 
 ## Features
--Add new notes.
--Edit existing notes  
--Delete notes.
--View notes details.
--Attractive UI.
--Custom Sweet alert for error.
+* -Add new notes.
+* -Edit existing notes  
+* -Delete notes.
+* -View notes details.
+* -Attractive UI.
+* -Custom Sweet alert for error.
 
 ## Technology Stack Used In This Project
 * ReactJs
